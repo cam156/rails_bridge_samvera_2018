@@ -11,4 +11,8 @@ class OrangesController < ApplicationController
   def new
     @orange = Orange.new
   end
+
+  def show
+    @orange = Orange.find(params[:id])
+  end
 end

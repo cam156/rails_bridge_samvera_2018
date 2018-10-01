@@ -8,6 +8,11 @@ RSpec.describe Orange, type: :model do
       expect(Orange.reflect_on_association(:tree).macro).to be :belongs_to
     end
 
+    it 'can have a name' do
+      orange = Orange.new(name: 'navel')
+      expect(orange.name).to eq('navel')
+    end
+
     it 'can have a tree id' do
       orange = Orange.new(tree_id: '123')
       expect(orange.tree_id).to eq('123')

@@ -35,8 +35,27 @@ RSpec.describe OrangesController, type: :controller do
       expect(response.content_type).to eq 'text/html'
     end
 
-    it 'lists the organge' do
+    it 'lists the oranges' do
       expect(assigns(:orange).attributes).to eq(Orange.new.attributes)
+    end
+  end
+
+  context '#show' do
+    let(:orange) { Orange.create(name: "Navel", tree: Tree.new) }
+    before do
+      get :show, params: {id: orange.id}
+    end
+
+    it 'renders the show view' do
+      expect(response).to render_template('show')
+    end
+
+    it 'renders html' do
+      expect(response.content_type).to eq 'text/html'
+    end
+
+    it 'lists the organge' do
+      expect(assigns(:orange)).to eq(orange)
     end
   end
 end
