@@ -5,8 +5,9 @@ This is a repository to help facilitate the workshop given at Samvera Connect 20
 It is based on the course Testing Rails Applications(http://docs.railsbridge.org/testing-rails-applications/) by  Rails Bridge (http://railsbridge.org/)
 
 1. Please clone the application using git
+
    ```
-   git clone <url from git>
+   git clone https://github.com/cam156/rails_bridge_samvera_2018.git
    ```
    
 1. change to the testapp directory
