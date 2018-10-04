@@ -1,8 +1,8 @@
 require "rails_helper"
 
 describe "oranges/show.html.erb" do
-  let(:tree)   { Tree.new(id: 'tree_id') }
-  let(:orange) { Orange.new(name: 'Navel',  tree: tree) }
+  let(:tree)   { Tree.create(id: 'tree_id') }
+  let(:orange) { Orange.create(name: 'Navel',  tree: tree) }
 
   it "displays the orange" do
     assign(:orange, orange)
